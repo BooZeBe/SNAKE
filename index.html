@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet"> 
+
+	<title>Snake</title>
+  <style type="text/css">
+	* {
+		padding: 0;
+		margin: 0;
+
+		box-sizing: border-box;
+	}	
+
+  	body {
+  		display: flex;
+  		justify-content: center;
+  		align-items: center;
+  		flex-direction: column;
+  		
+  		background: #89CFF0;
+
+  		font-family: 'Lato', Arial, sans-serif;
+  		color: white;
+  		text-align: center;
+
+		-webkit-font-smoothing: antialiased; // Сглаживание текста		
+		-webkit-overflow-scrolling: touch; // Норм. скролл на мобилах
+  	}
+
+  	canvas {
+  		border: 1px solid #fff;
+  	}
+
+  	#controls {
+  		display: flex;
+
+  		margin-top: 10px;
+  	}
+
+  	button {
+  		transition: background 0.2s;
+
+  		border: 1px solid white;
+  		background: none;
+  		outline: none;
+
+  		font-size: 30px;
+  		color: white;
+
+  		padding: 0px 5px;
+  		margin: 0px 10px;
+  	}
+
+  	button:hover, button:active {
+  		background: #a7a7a7;
+  	}
+
+  	@media (max-width: 500px) { 
+  		canvas {
+  			width: 300px;
+  			height: 300px;
+  		}
+
+  		h1 {
+  			font-size: 20px;
+  		}
+    }
+
+  </style>
+</head>
+<body>	
+	<h1>Snake. Simple <!-- play it with phonk. enjoy:) --></h1>
+
+	<canvas id="myCanvas" width="400" height="400"></canvas> 
+
+	<div id="controls">
+		<button onclick="setDirection('up')">△</button>
+		<button onclick="setDirection('down')">▽</button>
+		<button onclick="setDirection('left')">◁</button>
+		<button onclick="setDirection('right')">▷</button>
+	</div>
+
+	<h1 id="status">Control with Arrows. Play. Enjoy</h1>
+	<h2 id="score">Score: <span id="scoreNumber">0</span></h2>
+
+	<script src="script.js"></script>
+</body>
+</html>
